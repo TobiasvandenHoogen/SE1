@@ -1,15 +1,10 @@
 #include "hwlib.hpp"
 
-void uart_put_char( char c ){
+extern "C" void uart_put_char( char c ){
    hwlib::cout << c;
 }
 
-void print_asciz( const char * s ){
-   while( *s != '\0'){
-      uart_put_char( *s );
-      ++s;
-   }
-}
+extern "C" void print_asciz( const char * s );
 
 void application(){
    print_asciz( "Hello world, the ANSWER is 42! @[]`{}~\n" );	

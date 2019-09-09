@@ -9,7 +9,7 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES :=
+SOURCES := print_asciz.asm 
 
 # header files in this project
 HEADERS := 
@@ -20,4 +20,4 @@ SEARCH  :=
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
 RELATIVE := $(RELATIVE)..
-include $(RELATIVE)/Makefile.native
+include $(RELATIVE)/Makefile.due
