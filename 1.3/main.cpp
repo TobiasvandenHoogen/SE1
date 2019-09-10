@@ -9,14 +9,12 @@ extern "C" void print_asciz( const char * s );
 extern "C" void application();
 
 extern "C" char convert_char( char c){
-   int val = c;
-   if((val > 64) && (val < 91)){
-      val = val + 32;
+   if((c >= 'A' ) && (c < 'Z')){
+      c = c + 32;
    }
-   else if((val > 96) && (val < 123)){
-      val = val - 32;
+   else if((c > 'a') && (c < 'z')){
+      c = c - 32;
    }
-   c = val;
    return c;
 }
 
