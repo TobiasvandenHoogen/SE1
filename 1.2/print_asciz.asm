@@ -1,5 +1,3 @@
-
-
 .global print_asciz
 
 print_asciz:
