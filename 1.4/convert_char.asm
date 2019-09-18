@@ -2,7 +2,6 @@
 
 convert_char:
 push {r5, lr} //push register 5 and the link register to the stack
-mov r5, r0   
 
 checklowercase: 
 cmp  r0, #'a' //compare the ascii value of register 0 to the letter a 
@@ -21,5 +20,4 @@ add  r0,r0,#('a' - 'A') //add 32 to the ascii value of register 0 so that the ch
 b exit        //go to branch exit
 
 exit:
-mov r5, r0
 pop {r5, pc}

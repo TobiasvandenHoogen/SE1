@@ -27,13 +27,13 @@ public:
    static const int A5s = 932;
    static const int B5  = 987;
    
-   int frequency;
+   const int frequency;
     
    static const int dF = 1'000'000;  // full measure
    static const int dH = dF / 2;     // half measure
    static const int dQ = dF / 4;     // quarter measure
    
-    int duration;
+   const int duration;
 };
 
 #endif
