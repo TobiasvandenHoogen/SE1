@@ -10,15 +10,14 @@
 
 # source & header files in this project (main.cpp is automatically assumed)
 
-HEADERS += note_player_pc.hpp
-HEADERS += note.hpp
-HEADERS += note_player.hpp
-HEADERS += melody.hpp
+HEADERS += clock.hpp
+
+SOURCES += clock.cpp
+
 
 # other places to look for files for this project
 SEARCH  := 
-
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
 RELATIVE := $(RELATIVE)../
-include $(RELATIVE)Makefile.native
+include $(RELATIVE)Makefile.due

@@ -11,9 +11,13 @@
 # source & header files in this project (main.cpp is automatically assumed)
 
 HEADERS += note_player_pc.hpp
-HEADERS += note.hpp
 HEADERS += note_player.hpp
+HEADERS += note.hpp
 HEADERS += melody.hpp
+HEADERS += fur_elise.hpp
+
+SOURCES += melody.cpp 
+
 
 # other places to look for files for this project
 SEARCH  := 

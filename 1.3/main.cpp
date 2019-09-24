@@ -8,14 +8,15 @@ extern "C" void print_asciz( const char * s );
 
 extern "C" void application();
 
-extern "C" char convert_char( char c){
-   if((c >= 'A' ) && (c < 'Z')){
-      c = c + 32;
+extern "C" char convert_char( char c){ 
+   if((c >= 'A' ) && (c < 'Z')){ //if given char is between A and Z
+      c = c + 32;                //make it lowercase
    }
-   else if((c > 'a') && (c < 'z')){
-      c = c - 32;
+   else if((c > 'a') && (c < 'z')){ //if given char is between aand z 
+      c = c + 32;                   //make it uppercase
+      c = c - 32;                   
    }
-   return c;
+   return c;                      
 }
 
 int main( void ){	
