@@ -1,9 +1,0 @@
-
-generator.exe : generator.o melody.o 
-	g++ generator.o melody.o -o generator.exe
-
-generator.o : generator.cpp melody.cpp
-	g++ -c generator.cpp -o generator.o
-
-melody.o : melody.cpp
-	g++ -c melody.cpp -o melody.o

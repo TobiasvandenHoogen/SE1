@@ -8,20 +8,14 @@
 # 
 #############################################################################
 
-# source & header files in this project (main.cpp is automatically assumed)
+# source files in this project (main.cpp is automatically assumed)
+SOURCES :=
 
-HEADERS += note_player_pc.hpp
-HEADERS += note_player.hpp
-HEADERS += note.hpp
-HEADERS += melody.hpp
-HEADERS += fur_elise.hpp
-
-SOURCES += melody.cpp 
-SOURCES += generator.cpp
-
+# header files in this project
+HEADERS := match.hpp compressor.hpp decompressor.hpp
 
 # other places to look for files for this project
-SEARCH  := 
+SEARCH  := ../07-library
 
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there

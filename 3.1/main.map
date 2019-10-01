@@ -27,6 +27,22 @@ __dso_handle        0x4               bmptk_cortex.o
 Discarded input sections
 
  .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0x8 clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0xc clock.o
+ .group         0x0000000000000000        0xc clock.o
  .group         0x0000000000000000        0xc clock.o
  .group         0x0000000000000000        0xc clock.o
  .group         0x0000000000000000        0xc clock.o
@@ -35,10 +51,18 @@ Discarded input sections
  .text          0x0000000000000000        0x0 clock.o
  .data          0x0000000000000000        0x0 clock.o
  .bss           0x0000000000000000        0x0 clock.o
+ .text._ZN5hwlib8terminal25cursor_set_implementationENS_2xyE
+                0x0000000000000000        0xc clock.o
+ .text._ZN5hwlib8terminal5flushEv
+                0x0000000000000000        0x2 clock.o
+ .text._ZN5hwlib8terminal5clearEv
+                0x0000000000000000       0x50 clock.o
  .text._ZN3due11ad_pin_infoENS_7ad_pinsE
                 0x0000000000000000       0x1c clock.o
  .text._ZN3due11ad_seq_infoEm
                 0x0000000000000000       0x20 clock.o
+ .text._ZN5hwlib9uart_putcEc
+                0x0000000000000000        0x4 clock.o
  .text._ZN5hwlib19uart_char_availableEv
                 0x0000000000000000        0x4 clock.o
  .text._ZN5hwlib9uart_getcEv
@@ -662,10 +686,8 @@ Discarded input sections
                 0x0000000000000000        0x2 hwlib.o
  .text._ZN5hwlib7istream11getc_nowaitEv
                 0x0000000000000000       0x1a hwlib.o
- .text._ZNK5hwlib14image_invert_t18get_implementationENS_2xyE
-                0x0000000000000000       0x8a hwlib.o
- .text._ZNK5hwlib9image_8x818get_implementationENS_2xyE
-                0x0000000000000000       0x44 hwlib.o
+ .text._ZN5hwlib20cout_using_uart_putc5flushEv
+                0x0000000000000000        0x2 hwlib.o
  .text._ZN5hwlib20pin_in_out_from_oc_t5writeEb
                 0x0000000000000000        0xe hwlib.o
  .text._ZN5hwlib20pin_oc_from_in_out_t5writeEb
@@ -760,14 +782,20 @@ Discarded input sections
                 0x0000000000000000        0xc hwlib.o
  .text._ZN5hwlib6directERNS_7port_ocE
                 0x0000000000000000        0xc hwlib.o
+ .text._ZN5hwlib7ostreamlsEc
+                0x0000000000000000        0xe hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x0000000000000000       0x66 hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEi
+                0x0000000000000000       0xce hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamENS_2xyE
+                0x0000000000000000       0x38 hwlib.o
  .text._ZN5hwlib6strlenEPKc
                 0x0000000000000000       0x10 hwlib.o
  .text._ZN5hwlib8test_endEv
                 0x0000000000000000       0x58 hwlib.o
  .text._ZN5hwliblsERNS_7ostreamERKNS_5colorE
                 0x0000000000000000       0x54 hwlib.o
- .text._ZN5hwlib6invertERKNS_5imageE
-                0x0000000000000000       0x18 hwlib.o
  .text._ZN5hwlib6window5writeENS_2xyENS_5colorE
                 0x0000000000000000       0x3e hwlib.o
  .text._ZN5hwlib6circle4drawERNS_6windowE
@@ -792,12 +820,18 @@ Discarded input sections
                 0x0000000000000000        0x6 hwlib.o
  .text._ZN3due9now_ticksEv
                 0x0000000000000000       0x80 hwlib.o
+ .text._ZN3due9uart_initEv
+                0x0000000000000000       0x60 hwlib.o
  .text._ZN3due19uart_char_availableEv
                 0x0000000000000000       0x18 hwlib.o
  .text._ZN3due9uart_getcEv
                 0x0000000000000000       0x18 hwlib.o
+ .text._ZN3due9uart_putcEc
+                0x0000000000000000       0x1c hwlib.o
  .text._ZN5hwlib9uart_putcEc
                 0x0000000000000000        0x4 hwlib.o
+ .text._ZN5hwlib20cout_using_uart_putc4putcEc
+                0x0000000000000000        0xa hwlib.o
  .text._ZN5hwlib19uart_char_availableEv
                 0x0000000000000000        0x4 hwlib.o
  .text._ZN5hwlib19cin_using_uart_getc14char_availableEv
@@ -942,12 +976,10 @@ Discarded input sections
                 0x0000000000000000       0x14 hwlib.o
  .rodata._ZTVN5hwlib21port_direct_from_oc_tE
                 0x0000000000000000       0x1c hwlib.o
+ .rodata._ZTVN5hwlib20cout_using_uart_putcE
+                0x0000000000000000       0x10 hwlib.o
  .rodata._ZTVN5hwlib19cin_using_uart_getcE
                 0x0000000000000000       0x14 hwlib.o
- .rodata._ZTVN5hwlib14image_invert_tE
-                0x0000000000000000        0xc hwlib.o
- .rodata._ZTVN5hwlib9image_8x8E
-                0x0000000000000000        0xc hwlib.o
  .rodata._ZTVN5hwlib4lineE
                 0x0000000000000000        0xc hwlib.o
  .rodata._ZTVN5hwlib6circleE
@@ -964,7 +996,11 @@ Discarded input sections
                 0x0000000000000000        0x4 hwlib.o
  .bss._ZZN3due9now_ticksEvE9init_done
                 0x0000000000000000        0x1 hwlib.o
+ .bss._ZZN3due9uart_initEvE9init_done
+                0x0000000000000000        0x1 hwlib.o
  .bss._ZZN5hwlib4randEvE1n
+                0x0000000000000000        0x4 hwlib.o
+ .data._ZN3due7hw_uartE
                 0x0000000000000000        0x4 hwlib.o
  .data._ZN5hwlib12pin_in_dummyE
                 0x0000000000000000        0x4 hwlib.o
@@ -976,20 +1012,18 @@ Discarded input sections
                 0x0000000000000000        0x4 hwlib.o
  .data._ZN5hwlib3cinE
                 0x0000000000000000        0x4 hwlib.o
+ .data._ZN5hwlib4coutE
+                0x0000000000000000       0x14 hwlib.o
  .data._ZN6sam3xa15SystemCoreClockE
                 0x0000000000000000        0x4 hwlib.o
  .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
                 0x0000000000000000       0x37 hwlib.o
  .rodata._ZN5hwlib15font_16x16_dataE
                 0x0000000000000000      0xbe4 hwlib.o
- .rodata._ZN5hwlib16font_default_8x86imagesE
-                0x0000000000000000      0xa00 hwlib.o
  .rodata._ZN5hwlib8test_endEv.str1.1
                 0x0000000000000000       0x54 hwlib.o
- .rodata._ZN5hwlibL5blackE
-                0x0000000000000000        0x4 hwlib.o
- .rodata._ZN5hwlibL5whiteE
-                0x0000000000000000        0x4 hwlib.o
+ .rodata._ZN5hwliblsERNS_7ostreamENS_2xyE.str1.1
+                0x0000000000000000        0x6 hwlib.o
  .rodata._ZN5hwliblsERNS_7ostreamERKNS_5colorE.str1.1
                 0x0000000000000000       0x10 hwlib.o
  .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
@@ -1018,6 +1052,7 @@ Discarded input sections
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
@@ -1140,7 +1175,7 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 [!provide]                        PROVIDE (__ram_size = __ram_size)
                 [!provide]                        PROVIDE (__ram_end = __ram_end)
 
-.text           0x0000000000000000     0x2078
+.text           0x0000000000000000     0x2d80
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                __text_start = .
                 [!provide]                        PROVIDE (__text_start = __text_start)
@@ -1150,304 +1185,340 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 0x0000000000000000                __vectors
                 0x0000000000000020                . = ALIGN (0x4)
  *(.text .text.* .gnu.linkonce.t.*)
- .text._ZN5hwlib6window5writeENS_2xyENS_5colorE
-                0x0000000000000020       0x3e clock.o
-                0x0000000000000020                hwlib::window::write(hwlib::xy, hwlib::color)
- .text._ZN5hwlib6circle4drawERNS_6windowE
-                0x000000000000005e      0x18a clock.o
-                0x000000000000005e                hwlib::circle::draw(hwlib::window&)
- .text._ZN5hwlib4line4drawERNS_6windowE
-                0x00000000000001e8       0xb4 clock.o
-                0x00000000000001e8                hwlib::line::draw(hwlib::window&)
- .text._ZN6sam3xa10SystemInitEv
-                0x000000000000029c       0x7c clock.o
-                0x000000000000029c                sam3xa::SystemInit()
- .text._ZN3due8pin_infoENS_4pinsE
-                0x0000000000000318       0x20 clock.o
-                0x0000000000000318                due::pin_info(due::pins)
- .text._ZN3due14port_registersEm
-                0x0000000000000338       0x54 clock.o
-                0x0000000000000338                due::port_registers(unsigned long)
- .text._ZN3due12ticks_per_usEv
-                0x000000000000038c        0x6 clock.o
-                0x000000000000038c                due::ticks_per_us()
- *fill*         0x0000000000000392        0x2 
- .text._ZN3due9now_ticksEv
-                0x0000000000000394       0x80 clock.o
-                0x0000000000000394                due::now_ticks()
- .text._ZN5hwlib9uart_putcEc
-                0x0000000000000414        0x4 clock.o
-                0x0000000000000414                hwlib::uart_putc(char)
- .text._ZN5clock11draw_middleEv
-                0x0000000000000418       0x94 clock.o
-                0x0000000000000418                clock::draw_middle()
- .text._ZN5clock13draw_boundaryEv
-                0x00000000000004ac       0x30 clock.o
-                0x00000000000004ac                clock::draw_boundary()
- .text._ZN5clock14draw_hour_handEi
-                0x00000000000004dc       0x48 clock.o
-                0x00000000000004dc                clock::draw_hour_hand(int)
- .text._ZN5clock16draw_minute_handEi
-                0x0000000000000524       0x40 clock.o
-                0x0000000000000524                clock::draw_minute_hand(int)
- .text._ZN5clock6updateEv
-                0x0000000000000564       0xa8 clock.o
-                0x0000000000000564                clock::update()
- .text._ZN5hwlib20cout_using_uart_putc5flushEv
-                0x000000000000060c        0x2 hwlib.o
-                0x000000000000060c                hwlib::cout_using_uart_putc::flush()
- .text._ZN5hwlib5panicEPKcj
-                0x000000000000060e        0x2 hwlib.o
-                0x000000000000060e                hwlib::panic(char const*, unsigned int)
- .text._ZN5hwlib7ostreamlsEc
-                0x0000000000000610        0xe hwlib.o
-                0x0000000000000610                hwlib::ostream::operator<<(char)
+ .text._ZN5hwlib8terminal10cursor_setENS_2xyE
+                0x0000000000000020       0x28 clock.o
+                0x0000000000000020                hwlib::terminal::cursor_set(hwlib::xy)
+ .text._ZN5hwlib13terminal_from25cursor_set_implementationENS_2xyE
+                0x0000000000000048       0x28 clock.o
+                0x0000000000000048                hwlib::terminal_from::cursor_set_implementation(hwlib::xy)
+ .text._ZN5hwlib13terminal_from5clearEv
+                0x0000000000000070       0x28 clock.o
+                0x0000000000000070                hwlib::terminal_from::clear()
+ .text._ZN5hwlib13terminal_from5flushEv
+                0x0000000000000098        0x8 clock.o
+                0x0000000000000098                hwlib::terminal_from::flush()
+ .text._ZNK5hwlib16font_default_8x8ixEc
+                0x00000000000000a0       0x14 clock.o
+                0x00000000000000a0                hwlib::font_default_8x8::operator[](char) const
+ .text._ZN5hwlib8terminal4putcEc
+                0x00000000000000b4       0xde clock.o
+                0x00000000000000b4                hwlib::terminal::putc(char)
+ .text._ZN5hwlib7ostream6fillerEi
+                0x0000000000000192       0x1a clock.o
+                0x0000000000000192                hwlib::ostream::filler(int)
  .text._ZN5hwliblsERNS_7ostreamEPKc
-                0x000000000000061e       0x66 hwlib.o
-                0x000000000000061e                hwlib::operator<<(hwlib::ostream&, char const*)
+                0x00000000000001ac       0x54 clock.o
+                0x00000000000001ac                hwlib::operator<<(hwlib::ostream&, char const*)
  .text._ZN5hwliblsERNS_7ostreamEi
-                0x0000000000000684       0xce hwlib.o
-                0x0000000000000684                hwlib::operator<<(hwlib::ostream&, int)
- *fill*         0x0000000000000752        0x2 
- .text._ZN5hwliblsERNS_7ostreamENS_2xyE
-                0x0000000000000754       0x38 hwlib.o
-                0x0000000000000754                hwlib::operator<<(hwlib::ostream&, hwlib::xy)
+                0x0000000000000200       0xce clock.o
+                0x0000000000000200                hwlib::operator<<(hwlib::ostream&, int)
+ .text._ZN5hwlib6window5writeENS_2xyENS_5colorE
+                0x00000000000002ce       0x3e clock.o
+                0x00000000000002ce                hwlib::window::write(hwlib::xy, hwlib::color)
+ .text._ZN5hwlib6circle4drawERNS_6windowE
+                0x000000000000030c      0x18a clock.o
+                0x000000000000030c                hwlib::circle::draw(hwlib::window&)
+ .text._ZN5hwlib4line4drawERNS_6windowE
+                0x0000000000000496       0xb4 clock.o
+                0x0000000000000496                hwlib::line::draw(hwlib::window&)
+ .text._ZN5hwlib6window5writeENS_2xyERKNS_5imageE
+                0x000000000000054a       0x88 clock.o
+                0x000000000000054a                hwlib::window::write(hwlib::xy, hwlib::image const&)
+ .text._ZN5hwlib13terminal_from19putc_implementationEc
+                0x00000000000005d2       0x2e clock.o
+                0x00000000000005d2                hwlib::terminal_from::putc_implementation(char)
+ .text._ZN6sam3xa10SystemInitEv
+                0x0000000000000600       0x7c clock.o
+                0x0000000000000600                sam3xa::SystemInit()
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x000000000000067c       0x20 clock.o
+                0x000000000000067c                due::pin_info(due::pins)
+ .text._ZN3due14port_registersEm
+                0x000000000000069c       0x54 clock.o
+                0x000000000000069c                due::port_registers(unsigned long)
+ .text._ZN3due12ticks_per_usEv
+                0x00000000000006f0        0x6 clock.o
+                0x00000000000006f0                due::ticks_per_us()
+ *fill*         0x00000000000006f6        0x2 
+ .text._ZN3due9now_ticksEv
+                0x00000000000006f8       0x80 clock.o
+                0x00000000000006f8                due::now_ticks()
+ .text._ZN5clock11draw_middleEv
+                0x0000000000000778       0x6c clock.o
+                0x0000000000000778                clock::draw_middle()
+ .text._ZN5clock13draw_boundaryEv
+                0x00000000000007e4       0x30 clock.o
+                0x00000000000007e4                clock::draw_boundary()
+ .text._ZN5clock14draw_hour_handEi
+                0x0000000000000814       0x44 clock.o
+                0x0000000000000814                clock::draw_hour_hand(int)
+ .text._ZN5clock16draw_minute_handEi
+                0x0000000000000858       0x3c clock.o
+                0x0000000000000858                clock::draw_minute_hand(int)
+ .text._ZN5clock12digital_timeEiii
+                0x0000000000000894       0x98 clock.o
+                0x0000000000000894                clock::digital_time(int, int, int)
+ .text._ZN5clock6updateEv
+                0x000000000000092c       0xb4 clock.o
+                0x000000000000092c                clock::update()
+ .text._ZNK5hwlib14image_invert_t18get_implementationENS_2xyE
+                0x00000000000009e0       0x8a hwlib.o
+                0x00000000000009e0                hwlib::image_invert_t::get_implementation(hwlib::xy) const
+ *fill*         0x0000000000000a6a        0x2 
+ .text._ZNK5hwlib9image_8x818get_implementationENS_2xyE
+                0x0000000000000a6c       0x44 hwlib.o
+                0x0000000000000a6c                hwlib::image_8x8::get_implementation(hwlib::xy) const
+ .text._ZN5hwlib5panicEPKcj
+                0x0000000000000ab0        0x2 hwlib.o
+                0x0000000000000ab0                hwlib::panic(char const*, unsigned int)
  .text._ZN5hwlib3allENS_2xyE
-                0x000000000000078c       0x16 hwlib.o
-                0x000000000000078c                hwlib::all(hwlib::xy)
- *fill*         0x00000000000007a2        0x2 
- .text._ZN3due9uart_initEv
-                0x00000000000007a4       0x60 hwlib.o
-                0x00000000000007a4                due::uart_init()
- .text._ZN3due9uart_putcEc
-                0x0000000000000804       0x1c hwlib.o
-                0x0000000000000804                due::uart_putc(char)
- .text._ZN5hwlib20cout_using_uart_putc4putcEc
-                0x0000000000000820        0xa hwlib.o
-                0x0000000000000820                hwlib::cout_using_uart_putc::putc(char)
+                0x0000000000000ab2       0x16 hwlib.o
+                0x0000000000000ab2                hwlib::all(hwlib::xy)
+ .text._ZN5hwlib6invertERKNS_5imageE
+                0x0000000000000ac8       0x18 hwlib.o
+                0x0000000000000ac8                hwlib::invert(hwlib::image const&)
  .text._ZN5hwlib6now_usEv
-                0x000000000000082a       0x1c hwlib.o
-                0x000000000000082a                hwlib::now_us()
+                0x0000000000000ae0       0x1c hwlib.o
+                0x0000000000000ae0                hwlib::now_us()
  .text._ZN5hwlib12wait_us_busyEi
-                0x0000000000000846       0x1c hwlib.o
-                0x0000000000000846                hwlib::wait_us_busy(int)
+                0x0000000000000afc       0x1c hwlib.o
+                0x0000000000000afc                hwlib::wait_us_busy(int)
  .text._ZN5hwlib7wait_usEi
-                0x0000000000000862        0x8 hwlib.o
-                0x0000000000000862                hwlib::wait_us(int)
+                0x0000000000000b18        0x8 hwlib.o
+                0x0000000000000b18                hwlib::wait_us(int)
  .text._ZN5hwlib12wait_ms_busyEi
-                0x000000000000086a       0x16 hwlib.o
-                0x000000000000086a                hwlib::wait_ms_busy(int)
+                0x0000000000000b20       0x16 hwlib.o
+                0x0000000000000b20                hwlib::wait_ms_busy(int)
  .text._ZN5hwlib7wait_msEi
-                0x0000000000000880        0x8 hwlib.o
-                0x0000000000000880                hwlib::wait_ms(int)
+                0x0000000000000b36        0x8 hwlib.o
+                0x0000000000000b36                hwlib::wait_ms(int)
  .text._ZN5hwlib14i2c_primitives8read_ackEv
-                0x0000000000000888       0x10 main.o
-                0x0000000000000888                hwlib::i2c_primitives::read_ack()
+                0x0000000000000b3e       0x10 main.o
+                0x0000000000000b3e                hwlib::i2c_primitives::read_ack()
  .text._ZN5hwlib14i2c_primitives9write_ackEv
-                0x0000000000000898        0x8 main.o
-                0x0000000000000898                hwlib::i2c_primitives::write_ack()
+                0x0000000000000b4e        0x8 main.o
+                0x0000000000000b4e                hwlib::i2c_primitives::write_ack()
  .text._ZN5hwlib14i2c_primitives10write_nackEv
-                0x00000000000008a0        0x8 main.o
-                0x00000000000008a0                hwlib::i2c_primitives::write_nack()
+                0x0000000000000b56        0x8 main.o
+                0x0000000000000b56                hwlib::i2c_primitives::write_nack()
  .text._ZN5hwlib14i2c_primitives5writeEh
-                0x00000000000008a8       0x1c main.o
-                0x00000000000008a8                hwlib::i2c_primitives::write(unsigned char)
+                0x0000000000000b5e       0x1c main.o
+                0x0000000000000b5e                hwlib::i2c_primitives::write(unsigned char)
  .text._ZN5hwlib14i2c_primitives5writeEPKhj
-                0x00000000000008c4       0x24 main.o
-                0x00000000000008c4                hwlib::i2c_primitives::write(unsigned char const*, unsigned int)
+                0x0000000000000b7a       0x24 main.o
+                0x0000000000000b7a                hwlib::i2c_primitives::write(unsigned char const*, unsigned int)
  .text._ZN5hwlib14i2c_primitives9read_byteEv
-                0x00000000000008e8       0x20 main.o
-                0x00000000000008e8                hwlib::i2c_primitives::read_byte()
+                0x0000000000000b9e       0x20 main.o
+                0x0000000000000b9e                hwlib::i2c_primitives::read_byte()
  .text._ZN5hwlib14i2c_primitives4readEbPhj
-                0x0000000000000908       0x36 main.o
-                0x0000000000000908                hwlib::i2c_primitives::read(bool, unsigned char*, unsigned int)
+                0x0000000000000bbe       0x36 main.o
+                0x0000000000000bbe                hwlib::i2c_primitives::read(bool, unsigned char*, unsigned int)
  .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered20write_implementationENS_2xyENS_5colorE
-                0x000000000000093e       0x64 main.o
-                0x000000000000093e                hwlib::glcd_oled_i2c_128x64_buffered::write_implementation(hwlib::xy, hwlib::color)
+                0x0000000000000bf4       0x64 main.o
+                0x0000000000000bf4                hwlib::glcd_oled_i2c_128x64_buffered::write_implementation(hwlib::xy, hwlib::color)
  .text._ZN3due6pin_oc4readEv
-                0x00000000000009a2       0x10 main.o
-                0x00000000000009a2                due::pin_oc::read()
+                0x0000000000000c58       0x10 main.o
+                0x0000000000000c58                due::pin_oc::read()
  .text._ZN3due6pin_oc5writeEb
-                0x00000000000009b2       0x10 main.o
-                0x00000000000009b2                due::pin_oc::write(bool)
+                0x0000000000000c68       0x10 main.o
+                0x0000000000000c68                due::pin_oc::write(bool)
  .text._ZN3due6pin_oc5flushEv
-                0x00000000000009c2        0x2 main.o
-                0x00000000000009c2                due::pin_oc::flush()
+                0x0000000000000c78        0x2 main.o
+                0x0000000000000c78                due::pin_oc::flush()
  .text._ZN3due6pin_oc7refreshEv
-                0x00000000000009c4        0x2 main.o
-                0x00000000000009c4                due::pin_oc::refresh()
+                0x0000000000000c7a        0x2 main.o
+                0x0000000000000c7a                due::pin_oc::refresh()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda16wait_half_periodEv.isra.0
-                0x00000000000009c6        0x6 main.o
+                0x0000000000000c7c        0x6 main.o
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda10write_stopEv
-                0x00000000000009cc       0x60 main.o
-                0x00000000000009cc                hwlib::i2c_bus_bit_banged_scl_sda::write_stop()
+                0x0000000000000c82       0x60 main.o
+                0x0000000000000c82                hwlib::i2c_bus_bit_banged_scl_sda::write_stop()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda11write_startEv
-                0x0000000000000a2c       0x34 main.o
-                0x0000000000000a2c                hwlib::i2c_bus_bit_banged_scl_sda::write_start()
+                0x0000000000000ce2       0x34 main.o
+                0x0000000000000ce2                hwlib::i2c_bus_bit_banged_scl_sda::write_start()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda8read_bitEv
-                0x0000000000000a60       0x68 main.o
-                0x0000000000000a60                hwlib::i2c_bus_bit_banged_scl_sda::read_bit()
+                0x0000000000000d16       0x68 main.o
+                0x0000000000000d16                hwlib::i2c_bus_bit_banged_scl_sda::read_bit()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda9write_bitEb
-                0x0000000000000ac8       0x52 main.o
-                0x0000000000000ac8                hwlib::i2c_bus_bit_banged_scl_sda::write_bit(bool)
+                0x0000000000000d7e       0x52 main.o
+                0x0000000000000d7e                hwlib::i2c_bus_bit_banged_scl_sda::write_bit(bool)
  .text._ZN5hwlib21i2c_write_transactionC2ERNS_14i2c_primitivesEj
-                0x0000000000000b1a       0x24 main.o
-                0x0000000000000b1a                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
-                0x0000000000000b1a                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+                0x0000000000000dd0       0x24 main.o
+                0x0000000000000dd0                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+                0x0000000000000dd0                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
  .text._ZN5hwlib21i2c_write_transaction5writeEPKhj
-                0x0000000000000b3e        0x8 main.o
-                0x0000000000000b3e                hwlib::i2c_write_transaction::write(unsigned char const*, unsigned int)
+                0x0000000000000df4        0x8 main.o
+                0x0000000000000df4                hwlib::i2c_write_transaction::write(unsigned char const*, unsigned int)
  .text._ZN5hwlib21i2c_write_transactionD2Ev
-                0x0000000000000b46       0x18 main.o
-                0x0000000000000b46                hwlib::i2c_write_transaction::~i2c_write_transaction()
-                0x0000000000000b46                hwlib::i2c_write_transaction::~i2c_write_transaction()
+                0x0000000000000dfc       0x18 main.o
+                0x0000000000000dfc                hwlib::i2c_write_transaction::~i2c_write_transaction()
+                0x0000000000000dfc                hwlib::i2c_write_transaction::~i2c_write_transaction()
  .text._ZN5hwlib6window5clearENS_5colorE
-                0x0000000000000b5e       0x46 main.o
-                0x0000000000000b5e                hwlib::window::clear(hwlib::color)
+                0x0000000000000e14       0x46 main.o
+                0x0000000000000e14                hwlib::window::clear(hwlib::color)
  .text._ZN5hwlib6window5clearEv
-                0x0000000000000ba4       0x44 main.o
-                0x0000000000000ba4                hwlib::window::clear()
+                0x0000000000000e5a       0x44 main.o
+                0x0000000000000e5a                hwlib::window::clear()
  .text._ZN5hwlib11ssd1306_i2c7commandENS_16ssd1306_commandsEhh
-                0x0000000000000be8       0x3c main.o
-                0x0000000000000be8                hwlib::ssd1306_i2c::command(hwlib::ssd1306_commands, unsigned char, unsigned char)
+                0x0000000000000e9e       0x3c main.o
+                0x0000000000000e9e                hwlib::ssd1306_i2c::command(hwlib::ssd1306_commands, unsigned char, unsigned char)
  .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered5flushEv
-                0x0000000000000c24       0x58 main.o
-                0x0000000000000c24                hwlib::glcd_oled_i2c_128x64_buffered::flush()
+                0x0000000000000eda       0x58 main.o
+                0x0000000000000eda                hwlib::glcd_oled_i2c_128x64_buffered::flush()
+ *fill*         0x0000000000000f32        0x2 
  .text._ZN3due6pin_ocC2ENS_4pinsE
-                0x0000000000000c7c       0x34 main.o
-                0x0000000000000c7c                due::pin_oc::pin_oc(due::pins)
-                0x0000000000000c7c                due::pin_oc::pin_oc(due::pins)
- .text._Z3sind  0x0000000000000cb0      0x17c main.o
-                0x0000000000000cb0                sin(double)
- *fill*         0x0000000000000e2c        0x4 
+                0x0000000000000f34       0x34 main.o
+                0x0000000000000f34                due::pin_oc::pin_oc(due::pins)
+                0x0000000000000f34                due::pin_oc::pin_oc(due::pins)
+ .text._Z3sind  0x0000000000000f68      0x17c main.o
+                0x0000000000000f68                sin(double)
+ *fill*         0x00000000000010e4        0x4 
+ .text._ZN5clock10fill_arrayEv
+                0x00000000000010e8      0x168 main.o
+                0x00000000000010e8                clock::fill_array()
  .text.startup.main
-                0x0000000000000e30      0x228 main.o
-                0x0000000000000e30                main
+                0x0000000000001250       0xd4 main.o
+                0x0000000000001250                main
  .text.__startup
-                0x0000000000001058       0x48 bmptk_cortex.o
-                0x0000000000001058                __startup
- .text          0x00000000000010a0      0x378 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
-                0x00000000000010a0                __aeabi_drsub
-                0x00000000000010a8                __aeabi_dsub
-                0x00000000000010a8                __subdf3
-                0x00000000000010ac                __adddf3
-                0x00000000000010ac                __aeabi_dadd
-                0x0000000000001324                __aeabi_ui2d
-                0x0000000000001324                __floatunsidf
-                0x0000000000001344                __floatsidf
-                0x0000000000001344                __aeabi_i2d
-                0x0000000000001368                __extendsfdf2
-                0x0000000000001368                __aeabi_f2d
-                0x00000000000013ac                __aeabi_ul2d
-                0x00000000000013ac                __floatundidf
-                0x00000000000013bc                __floatdidf
-                0x00000000000013bc                __aeabi_l2d
- .text          0x0000000000001418      0x424 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
-                0x0000000000001418                __aeabi_dmul
-                0x0000000000001418                __muldf3
-                0x000000000000166c                __aeabi_ddiv
-                0x000000000000166c                __divdf3
- .text          0x000000000000183c       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_truncdfsf2.o)
-                0x000000000000183c                __aeabi_d2f
-                0x000000000000183c                __truncdfsf2
- .text          0x00000000000018dc      0x21c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
-                0x00000000000018dc                __aeabi_frsub
-                0x00000000000018e4                __subsf3
-                0x00000000000018e4                __aeabi_fsub
-                0x00000000000018e8                __aeabi_fadd
-                0x00000000000018e8                __addsf3
-                0x0000000000001a48                __aeabi_ui2f
-                0x0000000000001a48                __floatunsisf
-                0x0000000000001a50                __aeabi_i2f
-                0x0000000000001a50                __floatsisf
-                0x0000000000001a6c                __floatundisf
-                0x0000000000001a6c                __aeabi_ul2f
-                0x0000000000001a7c                __floatdisf
-                0x0000000000001a7c                __aeabi_l2f
- .text          0x0000000000001af8       0x4c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_fixsfsi.o)
-                0x0000000000001af8                __fixsfsi
-                0x0000000000001af8                __aeabi_f2iz
- .text          0x0000000000001b44       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
-                0x0000000000001b44                __aeabi_uldivmod
- .text          0x0000000000001b74      0x2d0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
-                0x0000000000001b74                __udivmoddi4
- .text          0x0000000000001e44        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
-                0x0000000000001e44                __aeabi_ldiv0
- .text.memset   0x0000000000001e48       0x94 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
-                0x0000000000001e48                memset
-                0x0000000000001edc                . = ALIGN (0x4)
+                0x0000000000001324       0x48 bmptk_cortex.o
+                0x0000000000001324                __startup
+ .text          0x000000000000136c      0x378 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+                0x000000000000136c                __aeabi_drsub
+                0x0000000000001374                __aeabi_dsub
+                0x0000000000001374                __subdf3
+                0x0000000000001378                __adddf3
+                0x0000000000001378                __aeabi_dadd
+                0x00000000000015f0                __aeabi_ui2d
+                0x00000000000015f0                __floatunsidf
+                0x0000000000001610                __floatsidf
+                0x0000000000001610                __aeabi_i2d
+                0x0000000000001634                __extendsfdf2
+                0x0000000000001634                __aeabi_f2d
+                0x0000000000001678                __aeabi_ul2d
+                0x0000000000001678                __floatundidf
+                0x0000000000001688                __floatdidf
+                0x0000000000001688                __aeabi_l2d
+ .text          0x00000000000016e4      0x424 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+                0x00000000000016e4                __aeabi_dmul
+                0x00000000000016e4                __muldf3
+                0x0000000000001938                __aeabi_ddiv
+                0x0000000000001938                __divdf3
+ .text          0x0000000000001b08       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000001b08                __aeabi_d2f
+                0x0000000000001b08                __truncdfsf2
+ .text          0x0000000000001ba8      0x21c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
+                0x0000000000001ba8                __aeabi_frsub
+                0x0000000000001bb0                __subsf3
+                0x0000000000001bb0                __aeabi_fsub
+                0x0000000000001bb4                __aeabi_fadd
+                0x0000000000001bb4                __addsf3
+                0x0000000000001d14                __aeabi_ui2f
+                0x0000000000001d14                __floatunsisf
+                0x0000000000001d1c                __aeabi_i2f
+                0x0000000000001d1c                __floatsisf
+                0x0000000000001d38                __floatundisf
+                0x0000000000001d38                __aeabi_ul2f
+                0x0000000000001d48                __floatdisf
+                0x0000000000001d48                __aeabi_l2f
+ .text          0x0000000000001dc4       0x4c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_fixsfsi.o)
+                0x0000000000001dc4                __fixsfsi
+                0x0000000000001dc4                __aeabi_f2iz
+ .text          0x0000000000001e10       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000001e10                __aeabi_uldivmod
+ .text          0x0000000000001e40      0x2d0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+                0x0000000000001e40                __udivmoddi4
+ .text          0x0000000000002110        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+                0x0000000000002110                __aeabi_ldiv0
+ .text.memset   0x0000000000002114       0x94 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                0x0000000000002114                memset
+                0x00000000000021a8                . = ALIGN (0x4)
  *(.glue_7t .glue_7)
- .glue_7        0x0000000000001edc        0x0 linker stubs
- .glue_7t       0x0000000000001edc        0x0 linker stubs
-                0x0000000000001edc                . = ALIGN (0x4)
+ .glue_7        0x00000000000021a8        0x0 linker stubs
+ .glue_7t       0x00000000000021a8        0x0 linker stubs
+                0x00000000000021a8                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata._ZTVN5hwlib4lineE
-                0x0000000000001edc        0xc clock.o
-                0x0000000000001edc                vtable for hwlib::line
+                0x00000000000021a8        0xc clock.o
+                0x00000000000021a8                vtable for hwlib::line
  .rodata._ZTVN5hwlib6circleE
-                0x0000000000001ee8        0xc clock.o
-                0x0000000000001ee8                vtable for hwlib::circle
+                0x00000000000021b4        0xc clock.o
+                0x00000000000021b4                vtable for hwlib::circle
+ .rodata._ZTVN5hwlib13terminal_fromE
+                0x00000000000021c0       0x20 clock.o
+                0x00000000000021c0                vtable for hwlib::terminal_from
+ .rodata._ZTVN5hwlib16font_default_8x8E
+                0x00000000000021e0        0xc clock.o
+                0x00000000000021e0                vtable for hwlib::font_default_8x8
  .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
-                0x0000000000001ef4       0x37 clock.o
+                0x00000000000021ec       0x37 clock.o
+ .rodata._ZN5clock12digital_timeEiii.str1.1
+                0x0000000000002223        0x8 clock.o
  .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
-                0x0000000000001f2b       0xa4 clock.o
- *fill*         0x0000000000001fcf        0x1 
- .rodata._ZTVN5hwlib20cout_using_uart_putcE
-                0x0000000000001fd0       0x10 hwlib.o
-                0x0000000000001fd0                vtable for hwlib::cout_using_uart_putc
- .rodata._ZN5hwliblsERNS_7ostreamENS_2xyE.str1.1
-                0x0000000000001fe0        0x6 hwlib.o
- *fill*         0x0000000000001fe6        0x2 
+                0x000000000000222b       0xa4 clock.o
+ *fill*         0x00000000000022cf        0x1 
+ .rodata._ZTVN5hwlib14image_invert_tE
+                0x00000000000022d0        0xc hwlib.o
+                0x00000000000022d0                vtable for hwlib::image_invert_t
+ .rodata._ZTVN5hwlib9image_8x8E
+                0x00000000000022dc        0xc hwlib.o
+                0x00000000000022dc                vtable for hwlib::image_8x8
+ .rodata._ZN5hwlib16font_default_8x86imagesE
+                0x00000000000022e8      0xa00 hwlib.o
+                0x00000000000022e8                hwlib::font_default_8x8::images
+ .rodata._ZN5hwlibL5blackE
+                0x0000000000002ce8        0x4 hwlib.o
+ .rodata._ZN5hwlibL5whiteE
+                0x0000000000002cec        0x4 hwlib.o
  .rodata._ZTVN5hwlib26i2c_bus_bit_banged_scl_sdaE
-                0x0000000000001fe8       0x34 main.o
-                0x0000000000001fe8                vtable for hwlib::i2c_bus_bit_banged_scl_sda
+                0x0000000000002cf0       0x34 main.o
+                0x0000000000002cf0                vtable for hwlib::i2c_bus_bit_banged_scl_sda
  .rodata._ZTVN5hwlib29glcd_oled_i2c_128x64_bufferedE
-                0x000000000000201c       0x18 main.o
-                0x000000000000201c                vtable for hwlib::glcd_oled_i2c_128x64_buffered
+                0x0000000000002d24       0x18 main.o
+                0x0000000000002d24                vtable for hwlib::glcd_oled_i2c_128x64_buffered
  .rodata._ZTVN3due6pin_ocE
-                0x0000000000002034       0x18 main.o
-                0x0000000000002034                vtable for due::pin_oc
+                0x0000000000002d3c       0x18 main.o
+                0x0000000000002d3c                vtable for due::pin_oc
  .rodata._ZN5hwlibL22ssd1306_initializationE
-                0x000000000000204c       0x29 main.o
-                0x0000000000002078                . = ALIGN (0x4)
- *fill*         0x0000000000002075        0x3 
+                0x0000000000002d54       0x29 main.o
+                0x0000000000002d80                . = ALIGN (0x4)
+ *fill*         0x0000000000002d7d        0x3 
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000002078                . = ALIGN (0x4)
+                0x0000000000002d80                . = ALIGN (0x4)
  *(.gcc_except_table)
-                0x0000000000002078                . = ALIGN (0x4)
+                0x0000000000002d80                . = ALIGN (0x4)
  *(.eh_frame_hdr)
-                0x0000000000002078                . = ALIGN (0x4)
+                0x0000000000002d80                . = ALIGN (0x4)
  *(.eh_frame)
-                0x0000000000002078                . = ALIGN (0x4)
-                0x0000000000002078                __text_end = .
+                0x0000000000002d80                . = ALIGN (0x4)
+                0x0000000000002d80                __text_end = .
                 [!provide]                        PROVIDE (__text_end = __text_end)
 
-.vfp11_veneer   0x0000000000002078        0x0
- .vfp11_veneer  0x0000000000002078        0x0 linker stubs
+.vfp11_veneer   0x0000000000002d80        0x0
+ .vfp11_veneer  0x0000000000002d80        0x0 linker stubs
 
-.v4_bx          0x0000000000002078        0x0
- .v4_bx         0x0000000000002078        0x0 linker stubs
+.v4_bx          0x0000000000002d80        0x0
+ .v4_bx         0x0000000000002d80        0x0 linker stubs
 
-.iplt           0x0000000000002078        0x0
- .iplt          0x0000000000002078        0x0 clock.o
+.iplt           0x0000000000002d80        0x0
+ .iplt          0x0000000000002d80        0x0 clock.o
 
 .IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
  *(.init)
  *(.preinit_array)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000000002078                . = ALIGN (0x4)
-                0x0000000000002078                __exidx_start = .
+                0x0000000000002d80                . = ALIGN (0x4)
+                0x0000000000002d80                __exidx_start = .
                 [!provide]                        PROVIDE (__exidx_start = __exidx_start)
 
-.ARM.exidx      0x0000000000002078        0x8
+.ARM.exidx      0x0000000000002d80        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000000002078        0x8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000002d80        0x8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
 
-.rel.dyn        0x0000000000002080        0x0
- .rel.iplt      0x0000000000002080        0x0 clock.o
-                0x0000000000002080                . = ALIGN (0x4)
-                0x0000000000002080                __exidx_end = .
+.rel.dyn        0x0000000000002d88        0x0
+ .rel.iplt      0x0000000000002d88        0x0 clock.o
+                0x0000000000002d88                . = ALIGN (0x4)
+                0x0000000000002d88                __exidx_end = .
                 [!provide]                        PROVIDE (__exidx_end = __exidx_end)
 
 .bss            0x0000000020000000    0x12010
@@ -1475,18 +1546,16 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 0x0000000020012008        0x4 clock.o
  .bss._ZZN3due9now_ticksEvE9init_done
                 0x000000002001200c        0x1 clock.o
- .bss._ZZN3due9uart_initEvE9init_done
-                0x000000002001200d        0x1 hwlib.o
                 0x0000000020012010                . = ALIGN (0x4)
- *fill*         0x000000002001200e        0x2 
+ *fill*         0x000000002001200d        0x3 
  *(COMMON)
                 0x0000000020012010                . = ALIGN (0x4)
                 0x0000000020012010                __bss_end = .
                 [!provide]                        PROVIDE (__bss_end = __bss_end)
 
-.data           0x0000000020012010       0x1c load address 0x0000000000002080
+.data           0x0000000020012010        0x4 load address 0x0000000000002d88
                 0x0000000020012010                . = ALIGN (0x4)
-                0x0000000000002080                __data_init_start = LOADADDR (.data)
+                0x0000000000002d88                __data_init_start = LOADADDR (.data)
                 [!provide]                        PROVIDE (__data_init_start = __data_init_start)
                 0x0000000020012010                __data_start = .
                 [!provide]                        PROVIDE (__data_start = __data_start)
@@ -1495,27 +1564,21 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
  .data._ZN6sam3xa15SystemCoreClockE
                 0x0000000020012010        0x4 clock.o
                 0x0000000020012010                sam3xa::SystemCoreClock
- .data._ZN3due7hw_uartE
-                0x0000000020012014        0x4 hwlib.o
-                0x0000000020012014                due::hw_uart
- .data._ZN5hwlib4coutE
-                0x0000000020012018       0x14 hwlib.o
-                0x0000000020012018                hwlib::cout
-                0x000000002001202c                . = ALIGN (0x4)
-                0x000000002001202c                __data_end = .
+                0x0000000020012014                . = ALIGN (0x4)
+                0x0000000020012014                __data_end = .
                 [!provide]                        PROVIDE (__data_end = __data_end)
-                0x0000000000002080                __data_init_end = LOADADDR (.data)
+                0x0000000000002d88                __data_init_end = LOADADDR (.data)
                 [!provide]                        PROVIDE (__data_init_end = __data_init_end)
                 [!provide]                        PROVIDE (__data_size = (__data_end - __data_start))
                 [!provide]                        PROVIDE (__data_init_size = __data_size)
                 [!provide]                        PROVIDE (__data_init_end = (__data_init_start + __data_init_size))
 
-.igot.plt       0x000000002001202c        0x0 load address 0x000000000000209c
- .igot.plt      0x000000002001202c        0x0 clock.o
-                0x000000002001202c                . = ALIGN (0x4)
-                0x000000002001202c                __heap_start = .
+.igot.plt       0x0000000020012014        0x0 load address 0x0000000000002d8c
+ .igot.plt      0x0000000020012014        0x0 clock.o
+                0x0000000020012014                . = ALIGN (0x4)
+                0x0000000020012014                __heap_start = .
                 [!provide]                        PROVIDE (__heap_start = __heap_start)
-                0x000000002001202c                . = ALIGN (0x4)
+                0x0000000020012014                . = ALIGN (0x4)
                 0x0000000020018000                __heap_end = __ram_end
                 [!provide]                        PROVIDE (__heap_end = __heap_end)
 
