@@ -1044,6 +1044,8 @@ Discarded input sections
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
@@ -1052,6 +1054,8 @@ Discarded input sections
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
  .group         0x0000000000000000        0x8 main.o
+ .group         0x0000000000000000        0xc main.o
+ .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
  .group         0x0000000000000000        0xc main.o
@@ -1175,7 +1179,7 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 [!provide]                        PROVIDE (__ram_size = __ram_size)
                 [!provide]                        PROVIDE (__ram_end = __ram_end)
 
-.text           0x0000000000000000     0x2d80
+.text           0x0000000000000000     0x2e38
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                __text_start = .
                 [!provide]                        PROVIDE (__text_start = __text_start)
@@ -1258,13 +1262,21 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
  .text._ZN5clock12digital_timeEiii
                 0x0000000000000894       0x98 clock.o
                 0x0000000000000894                clock::digital_time(int, int, int)
+ .text._ZN5clock7addHourEi
+                0x000000000000092c        0xc clock.o
+                0x000000000000092c                clock::addHour(int)
+ .text._ZN5clock6addMinEi
+                0x0000000000000938        0xc clock.o
+                0x0000000000000938                clock::addMin(int)
+ .text._ZN5clock6addSecEi
+                0x0000000000000944        0xc clock.o
+                0x0000000000000944                clock::addSec(int)
  .text._ZN5clock6updateEv
-                0x000000000000092c       0xb4 clock.o
-                0x000000000000092c                clock::update()
+                0x0000000000000950       0x92 clock.o
+                0x0000000000000950                clock::update()
  .text._ZNK5hwlib14image_invert_t18get_implementationENS_2xyE
-                0x00000000000009e0       0x8a hwlib.o
-                0x00000000000009e0                hwlib::image_invert_t::get_implementation(hwlib::xy) const
- *fill*         0x0000000000000a6a        0x2 
+                0x00000000000009e2       0x8a hwlib.o
+                0x00000000000009e2                hwlib::image_invert_t::get_implementation(hwlib::xy) const
  .text._ZNK5hwlib9image_8x818get_implementationENS_2xyE
                 0x0000000000000a6c       0x44 hwlib.o
                 0x0000000000000a6c                hwlib::image_8x8::get_implementation(hwlib::xy) const
@@ -1316,209 +1328,222 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
  .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered20write_implementationENS_2xyENS_5colorE
                 0x0000000000000bf4       0x64 main.o
                 0x0000000000000bf4                hwlib::glcd_oled_i2c_128x64_buffered::write_implementation(hwlib::xy, hwlib::color)
- .text._ZN3due6pin_oc4readEv
+ .text._ZN3due6pin_in4readEv
                 0x0000000000000c58       0x10 main.o
-                0x0000000000000c58                due::pin_oc::read()
+                0x0000000000000c58                due::pin_in::read()
+ .text._ZN3due6pin_in7refreshEv
+                0x0000000000000c68        0x2 main.o
+                0x0000000000000c68                due::pin_in::refresh()
+ .text._ZN3due6pin_oc4readEv
+                0x0000000000000c6a       0x10 main.o
+                0x0000000000000c6a                due::pin_oc::read()
  .text._ZN3due6pin_oc5writeEb
-                0x0000000000000c68       0x10 main.o
-                0x0000000000000c68                due::pin_oc::write(bool)
+                0x0000000000000c7a       0x10 main.o
+                0x0000000000000c7a                due::pin_oc::write(bool)
  .text._ZN3due6pin_oc5flushEv
-                0x0000000000000c78        0x2 main.o
-                0x0000000000000c78                due::pin_oc::flush()
+                0x0000000000000c8a        0x2 main.o
+                0x0000000000000c8a                due::pin_oc::flush()
  .text._ZN3due6pin_oc7refreshEv
-                0x0000000000000c7a        0x2 main.o
-                0x0000000000000c7a                due::pin_oc::refresh()
+                0x0000000000000c8c        0x2 main.o
+                0x0000000000000c8c                due::pin_oc::refresh()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda16wait_half_periodEv.isra.0
-                0x0000000000000c7c        0x6 main.o
+                0x0000000000000c8e        0x6 main.o
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda10write_stopEv
-                0x0000000000000c82       0x60 main.o
-                0x0000000000000c82                hwlib::i2c_bus_bit_banged_scl_sda::write_stop()
+                0x0000000000000c94       0x60 main.o
+                0x0000000000000c94                hwlib::i2c_bus_bit_banged_scl_sda::write_stop()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda11write_startEv
-                0x0000000000000ce2       0x34 main.o
-                0x0000000000000ce2                hwlib::i2c_bus_bit_banged_scl_sda::write_start()
+                0x0000000000000cf4       0x34 main.o
+                0x0000000000000cf4                hwlib::i2c_bus_bit_banged_scl_sda::write_start()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda8read_bitEv
-                0x0000000000000d16       0x68 main.o
-                0x0000000000000d16                hwlib::i2c_bus_bit_banged_scl_sda::read_bit()
+                0x0000000000000d28       0x68 main.o
+                0x0000000000000d28                hwlib::i2c_bus_bit_banged_scl_sda::read_bit()
  .text._ZN5hwlib26i2c_bus_bit_banged_scl_sda9write_bitEb
-                0x0000000000000d7e       0x52 main.o
-                0x0000000000000d7e                hwlib::i2c_bus_bit_banged_scl_sda::write_bit(bool)
+                0x0000000000000d90       0x52 main.o
+                0x0000000000000d90                hwlib::i2c_bus_bit_banged_scl_sda::write_bit(bool)
  .text._ZN5hwlib21i2c_write_transactionC2ERNS_14i2c_primitivesEj
-                0x0000000000000dd0       0x24 main.o
-                0x0000000000000dd0                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
-                0x0000000000000dd0                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+                0x0000000000000de2       0x24 main.o
+                0x0000000000000de2                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
+                0x0000000000000de2                hwlib::i2c_write_transaction::i2c_write_transaction(hwlib::i2c_primitives&, unsigned int)
  .text._ZN5hwlib21i2c_write_transaction5writeEPKhj
-                0x0000000000000df4        0x8 main.o
-                0x0000000000000df4                hwlib::i2c_write_transaction::write(unsigned char const*, unsigned int)
+                0x0000000000000e06        0x8 main.o
+                0x0000000000000e06                hwlib::i2c_write_transaction::write(unsigned char const*, unsigned int)
  .text._ZN5hwlib21i2c_write_transactionD2Ev
-                0x0000000000000dfc       0x18 main.o
-                0x0000000000000dfc                hwlib::i2c_write_transaction::~i2c_write_transaction()
-                0x0000000000000dfc                hwlib::i2c_write_transaction::~i2c_write_transaction()
+                0x0000000000000e0e       0x18 main.o
+                0x0000000000000e0e                hwlib::i2c_write_transaction::~i2c_write_transaction()
+                0x0000000000000e0e                hwlib::i2c_write_transaction::~i2c_write_transaction()
  .text._ZN5hwlib6window5clearENS_5colorE
-                0x0000000000000e14       0x46 main.o
-                0x0000000000000e14                hwlib::window::clear(hwlib::color)
+                0x0000000000000e26       0x46 main.o
+                0x0000000000000e26                hwlib::window::clear(hwlib::color)
  .text._ZN5hwlib6window5clearEv
-                0x0000000000000e5a       0x44 main.o
-                0x0000000000000e5a                hwlib::window::clear()
+                0x0000000000000e6c       0x44 main.o
+                0x0000000000000e6c                hwlib::window::clear()
  .text._ZN5hwlib11ssd1306_i2c7commandENS_16ssd1306_commandsEhh
-                0x0000000000000e9e       0x3c main.o
-                0x0000000000000e9e                hwlib::ssd1306_i2c::command(hwlib::ssd1306_commands, unsigned char, unsigned char)
+                0x0000000000000eb0       0x3c main.o
+                0x0000000000000eb0                hwlib::ssd1306_i2c::command(hwlib::ssd1306_commands, unsigned char, unsigned char)
  .text._ZN5hwlib29glcd_oled_i2c_128x64_buffered5flushEv
-                0x0000000000000eda       0x58 main.o
-                0x0000000000000eda                hwlib::glcd_oled_i2c_128x64_buffered::flush()
- *fill*         0x0000000000000f32        0x2 
+                0x0000000000000eec       0x58 main.o
+                0x0000000000000eec                hwlib::glcd_oled_i2c_128x64_buffered::flush()
+ .text._ZN3due6pin_inC2ENS_4pinsE
+                0x0000000000000f44       0x34 main.o
+                0x0000000000000f44                due::pin_in::pin_in(due::pins)
+                0x0000000000000f44                due::pin_in::pin_in(due::pins)
  .text._ZN3due6pin_ocC2ENS_4pinsE
-                0x0000000000000f34       0x34 main.o
-                0x0000000000000f34                due::pin_oc::pin_oc(due::pins)
-                0x0000000000000f34                due::pin_oc::pin_oc(due::pins)
- .text._Z3sind  0x0000000000000f68      0x17c main.o
-                0x0000000000000f68                sin(double)
- *fill*         0x00000000000010e4        0x4 
+                0x0000000000000f78       0x34 main.o
+                0x0000000000000f78                due::pin_oc::pin_oc(due::pins)
+                0x0000000000000f78                due::pin_oc::pin_oc(due::pins)
+ *fill*         0x0000000000000fac        0x4 
+ .text._Z3sind  0x0000000000000fb0      0x17c main.o
+                0x0000000000000fb0                sin(double)
+ *fill*         0x000000000000112c        0x4 
  .text._ZN5clock10fill_arrayEv
-                0x00000000000010e8      0x168 main.o
-                0x00000000000010e8                clock::fill_array()
+                0x0000000000001130      0x168 main.o
+                0x0000000000001130                clock::fill_array()
  .text.startup.main
-                0x0000000000001250       0xd4 main.o
-                0x0000000000001250                main
+                0x0000000000001298      0x134 main.o
+                0x0000000000001298                main
  .text.__startup
-                0x0000000000001324       0x48 bmptk_cortex.o
-                0x0000000000001324                __startup
- .text          0x000000000000136c      0x378 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
-                0x000000000000136c                __aeabi_drsub
-                0x0000000000001374                __aeabi_dsub
-                0x0000000000001374                __subdf3
-                0x0000000000001378                __adddf3
-                0x0000000000001378                __aeabi_dadd
-                0x00000000000015f0                __aeabi_ui2d
-                0x00000000000015f0                __floatunsidf
-                0x0000000000001610                __floatsidf
-                0x0000000000001610                __aeabi_i2d
-                0x0000000000001634                __extendsfdf2
-                0x0000000000001634                __aeabi_f2d
-                0x0000000000001678                __aeabi_ul2d
-                0x0000000000001678                __floatundidf
-                0x0000000000001688                __floatdidf
-                0x0000000000001688                __aeabi_l2d
- .text          0x00000000000016e4      0x424 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
-                0x00000000000016e4                __aeabi_dmul
-                0x00000000000016e4                __muldf3
-                0x0000000000001938                __aeabi_ddiv
-                0x0000000000001938                __divdf3
- .text          0x0000000000001b08       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_truncdfsf2.o)
-                0x0000000000001b08                __aeabi_d2f
-                0x0000000000001b08                __truncdfsf2
- .text          0x0000000000001ba8      0x21c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
-                0x0000000000001ba8                __aeabi_frsub
-                0x0000000000001bb0                __subsf3
-                0x0000000000001bb0                __aeabi_fsub
-                0x0000000000001bb4                __aeabi_fadd
-                0x0000000000001bb4                __addsf3
-                0x0000000000001d14                __aeabi_ui2f
-                0x0000000000001d14                __floatunsisf
-                0x0000000000001d1c                __aeabi_i2f
-                0x0000000000001d1c                __floatsisf
-                0x0000000000001d38                __floatundisf
-                0x0000000000001d38                __aeabi_ul2f
-                0x0000000000001d48                __floatdisf
-                0x0000000000001d48                __aeabi_l2f
- .text          0x0000000000001dc4       0x4c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_fixsfsi.o)
-                0x0000000000001dc4                __fixsfsi
-                0x0000000000001dc4                __aeabi_f2iz
- .text          0x0000000000001e10       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
-                0x0000000000001e10                __aeabi_uldivmod
- .text          0x0000000000001e40      0x2d0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
-                0x0000000000001e40                __udivmoddi4
- .text          0x0000000000002110        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
-                0x0000000000002110                __aeabi_ldiv0
- .text.memset   0x0000000000002114       0x94 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
-                0x0000000000002114                memset
-                0x00000000000021a8                . = ALIGN (0x4)
+                0x00000000000013cc       0x48 bmptk_cortex.o
+                0x00000000000013cc                __startup
+ .text          0x0000000000001414      0x378 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+                0x0000000000001414                __aeabi_drsub
+                0x000000000000141c                __aeabi_dsub
+                0x000000000000141c                __subdf3
+                0x0000000000001420                __adddf3
+                0x0000000000001420                __aeabi_dadd
+                0x0000000000001698                __aeabi_ui2d
+                0x0000000000001698                __floatunsidf
+                0x00000000000016b8                __floatsidf
+                0x00000000000016b8                __aeabi_i2d
+                0x00000000000016dc                __extendsfdf2
+                0x00000000000016dc                __aeabi_f2d
+                0x0000000000001720                __aeabi_ul2d
+                0x0000000000001720                __floatundidf
+                0x0000000000001730                __floatdidf
+                0x0000000000001730                __aeabi_l2d
+ .text          0x000000000000178c      0x424 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+                0x000000000000178c                __aeabi_dmul
+                0x000000000000178c                __muldf3
+                0x00000000000019e0                __aeabi_ddiv
+                0x00000000000019e0                __divdf3
+ .text          0x0000000000001bb0       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000001bb0                __aeabi_d2f
+                0x0000000000001bb0                __truncdfsf2
+ .text          0x0000000000001c50      0x21c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
+                0x0000000000001c50                __aeabi_frsub
+                0x0000000000001c58                __subsf3
+                0x0000000000001c58                __aeabi_fsub
+                0x0000000000001c5c                __aeabi_fadd
+                0x0000000000001c5c                __addsf3
+                0x0000000000001dbc                __aeabi_ui2f
+                0x0000000000001dbc                __floatunsisf
+                0x0000000000001dc4                __aeabi_i2f
+                0x0000000000001dc4                __floatsisf
+                0x0000000000001de0                __floatundisf
+                0x0000000000001de0                __aeabi_ul2f
+                0x0000000000001df0                __floatdisf
+                0x0000000000001df0                __aeabi_l2f
+ .text          0x0000000000001e6c       0x4c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_arm_fixsfsi.o)
+                0x0000000000001e6c                __fixsfsi
+                0x0000000000001e6c                __aeabi_f2iz
+ .text          0x0000000000001eb8       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000001eb8                __aeabi_uldivmod
+ .text          0x0000000000001ee8      0x2d0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+                0x0000000000001ee8                __udivmoddi4
+ .text          0x00000000000021b8        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_dvmd_tls.o)
+                0x00000000000021b8                __aeabi_ldiv0
+ .text.memset   0x00000000000021bc       0x94 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                0x00000000000021bc                memset
+                0x0000000000002250                . = ALIGN (0x4)
  *(.glue_7t .glue_7)
- .glue_7        0x00000000000021a8        0x0 linker stubs
- .glue_7t       0x00000000000021a8        0x0 linker stubs
-                0x00000000000021a8                . = ALIGN (0x4)
+ .glue_7        0x0000000000002250        0x0 linker stubs
+ .glue_7t       0x0000000000002250        0x0 linker stubs
+                0x0000000000002250                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata._ZTVN5hwlib4lineE
-                0x00000000000021a8        0xc clock.o
-                0x00000000000021a8                vtable for hwlib::line
+                0x0000000000002250        0xc clock.o
+                0x0000000000002250                vtable for hwlib::line
  .rodata._ZTVN5hwlib6circleE
-                0x00000000000021b4        0xc clock.o
-                0x00000000000021b4                vtable for hwlib::circle
+                0x000000000000225c        0xc clock.o
+                0x000000000000225c                vtable for hwlib::circle
  .rodata._ZTVN5hwlib13terminal_fromE
-                0x00000000000021c0       0x20 clock.o
-                0x00000000000021c0                vtable for hwlib::terminal_from
+                0x0000000000002268       0x20 clock.o
+                0x0000000000002268                vtable for hwlib::terminal_from
  .rodata._ZTVN5hwlib16font_default_8x8E
-                0x00000000000021e0        0xc clock.o
-                0x00000000000021e0                vtable for hwlib::font_default_8x8
+                0x0000000000002288        0xc clock.o
+                0x0000000000002288                vtable for hwlib::font_default_8x8
  .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
-                0x00000000000021ec       0x37 clock.o
+                0x0000000000002294       0x37 clock.o
  .rodata._ZN5clock12digital_timeEiii.str1.1
-                0x0000000000002223        0x8 clock.o
+                0x00000000000022cb        0x8 clock.o
  .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
-                0x000000000000222b       0xa4 clock.o
- *fill*         0x00000000000022cf        0x1 
+                0x00000000000022d3       0xa4 clock.o
+ *fill*         0x0000000000002377        0x1 
  .rodata._ZTVN5hwlib14image_invert_tE
-                0x00000000000022d0        0xc hwlib.o
-                0x00000000000022d0                vtable for hwlib::image_invert_t
+                0x0000000000002378        0xc hwlib.o
+                0x0000000000002378                vtable for hwlib::image_invert_t
  .rodata._ZTVN5hwlib9image_8x8E
-                0x00000000000022dc        0xc hwlib.o
-                0x00000000000022dc                vtable for hwlib::image_8x8
+                0x0000000000002384        0xc hwlib.o
+                0x0000000000002384                vtable for hwlib::image_8x8
  .rodata._ZN5hwlib16font_default_8x86imagesE
-                0x00000000000022e8      0xa00 hwlib.o
-                0x00000000000022e8                hwlib::font_default_8x8::images
+                0x0000000000002390      0xa00 hwlib.o
+                0x0000000000002390                hwlib::font_default_8x8::images
  .rodata._ZN5hwlibL5blackE
-                0x0000000000002ce8        0x4 hwlib.o
+                0x0000000000002d90        0x4 hwlib.o
  .rodata._ZN5hwlibL5whiteE
-                0x0000000000002cec        0x4 hwlib.o
+                0x0000000000002d94        0x4 hwlib.o
  .rodata._ZTVN5hwlib26i2c_bus_bit_banged_scl_sdaE
-                0x0000000000002cf0       0x34 main.o
-                0x0000000000002cf0                vtable for hwlib::i2c_bus_bit_banged_scl_sda
+                0x0000000000002d98       0x34 main.o
+                0x0000000000002d98                vtable for hwlib::i2c_bus_bit_banged_scl_sda
  .rodata._ZTVN5hwlib29glcd_oled_i2c_128x64_bufferedE
-                0x0000000000002d24       0x18 main.o
-                0x0000000000002d24                vtable for hwlib::glcd_oled_i2c_128x64_buffered
+                0x0000000000002dcc       0x18 main.o
+                0x0000000000002dcc                vtable for hwlib::glcd_oled_i2c_128x64_buffered
+ .rodata._ZTVN3due6pin_inE
+                0x0000000000002de4       0x10 main.o
+                0x0000000000002de4                vtable for due::pin_in
  .rodata._ZTVN3due6pin_ocE
-                0x0000000000002d3c       0x18 main.o
-                0x0000000000002d3c                vtable for due::pin_oc
+                0x0000000000002df4       0x18 main.o
+                0x0000000000002df4                vtable for due::pin_oc
  .rodata._ZN5hwlibL22ssd1306_initializationE
-                0x0000000000002d54       0x29 main.o
-                0x0000000000002d80                . = ALIGN (0x4)
- *fill*         0x0000000000002d7d        0x3 
+                0x0000000000002e0c       0x29 main.o
+                0x0000000000002e38                . = ALIGN (0x4)
+ *fill*         0x0000000000002e35        0x3 
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000002d80                . = ALIGN (0x4)
+                0x0000000000002e38                . = ALIGN (0x4)
  *(.gcc_except_table)
-                0x0000000000002d80                . = ALIGN (0x4)
+                0x0000000000002e38                . = ALIGN (0x4)
  *(.eh_frame_hdr)
-                0x0000000000002d80                . = ALIGN (0x4)
+                0x0000000000002e38                . = ALIGN (0x4)
  *(.eh_frame)
-                0x0000000000002d80                . = ALIGN (0x4)
-                0x0000000000002d80                __text_end = .
+                0x0000000000002e38                . = ALIGN (0x4)
+                0x0000000000002e38                __text_end = .
                 [!provide]                        PROVIDE (__text_end = __text_end)
 
-.vfp11_veneer   0x0000000000002d80        0x0
- .vfp11_veneer  0x0000000000002d80        0x0 linker stubs
+.vfp11_veneer   0x0000000000002e38        0x0
+ .vfp11_veneer  0x0000000000002e38        0x0 linker stubs
 
-.v4_bx          0x0000000000002d80        0x0
- .v4_bx         0x0000000000002d80        0x0 linker stubs
+.v4_bx          0x0000000000002e38        0x0
+ .v4_bx         0x0000000000002e38        0x0 linker stubs
 
-.iplt           0x0000000000002d80        0x0
- .iplt          0x0000000000002d80        0x0 clock.o
+.iplt           0x0000000000002e38        0x0
+ .iplt          0x0000000000002e38        0x0 clock.o
 
 .IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
  *(.init)
  *(.preinit_array)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
-                0x0000000000002d80                . = ALIGN (0x4)
-                0x0000000000002d80                __exidx_start = .
+                0x0000000000002e38                . = ALIGN (0x4)
+                0x0000000000002e38                __exidx_start = .
                 [!provide]                        PROVIDE (__exidx_start = __exidx_start)
 
-.ARM.exidx      0x0000000000002d80        0x8
+.ARM.exidx      0x0000000000002e38        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000000000002d80        0x8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000002e38        0x8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/libgcc.a(_udivmoddi4.o)
 
-.rel.dyn        0x0000000000002d88        0x0
- .rel.iplt      0x0000000000002d88        0x0 clock.o
-                0x0000000000002d88                . = ALIGN (0x4)
-                0x0000000000002d88                __exidx_end = .
+.rel.dyn        0x0000000000002e40        0x0
+ .rel.iplt      0x0000000000002e40        0x0 clock.o
+                0x0000000000002e40                . = ALIGN (0x4)
+                0x0000000000002e40                __exidx_end = .
                 [!provide]                        PROVIDE (__exidx_end = __exidx_end)
 
 .bss            0x0000000020000000    0x12010
@@ -1553,9 +1578,9 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 0x0000000020012010                __bss_end = .
                 [!provide]                        PROVIDE (__bss_end = __bss_end)
 
-.data           0x0000000020012010        0x4 load address 0x0000000000002d88
+.data           0x0000000020012010        0x4 load address 0x0000000000002e40
                 0x0000000020012010                . = ALIGN (0x4)
-                0x0000000000002d88                __data_init_start = LOADADDR (.data)
+                0x0000000000002e40                __data_init_start = LOADADDR (.data)
                 [!provide]                        PROVIDE (__data_init_start = __data_init_start)
                 0x0000000020012010                __data_start = .
                 [!provide]                        PROVIDE (__data_start = __data_start)
@@ -1567,13 +1592,13 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb
                 0x0000000020012014                . = ALIGN (0x4)
                 0x0000000020012014                __data_end = .
                 [!provide]                        PROVIDE (__data_end = __data_end)
-                0x0000000000002d88                __data_init_end = LOADADDR (.data)
+                0x0000000000002e40                __data_init_end = LOADADDR (.data)
                 [!provide]                        PROVIDE (__data_init_end = __data_init_end)
                 [!provide]                        PROVIDE (__data_size = (__data_end - __data_start))
                 [!provide]                        PROVIDE (__data_init_size = __data_size)
                 [!provide]                        PROVIDE (__data_init_end = (__data_init_start + __data_init_size))
 
-.igot.plt       0x0000000020012014        0x0 load address 0x0000000000002d8c
+.igot.plt       0x0000000020012014        0x0 load address 0x0000000000002e44
  .igot.plt      0x0000000020012014        0x0 clock.o
                 0x0000000020012014                . = ALIGN (0x4)
                 0x0000000020012014                __heap_start = .

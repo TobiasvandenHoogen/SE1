@@ -1,8 +1,5 @@
 #include "clock.hpp"
 
-
-
-
 void clock::draw_middle(){
     constexpr uint_fast16_t rad = 1;
     hwlib::circle mid(middle_point, rad);
@@ -45,37 +42,38 @@ void clock::digital_time(int hour, int min, int sec){
 
 }
 
-void clock::update(){
-    int sec = 0;
-    int min = 0;
-    int hour = 0;
-    uint64_t timer = hwlib::now_us() + 1000000;
-    while(true){
+void clock::addHour(int n){
+    hour += n;
+}
+
+void clock::addMin(int n){
+    min += n;
+}
+void clock::addSec(int n){
+    sec += n;
+}
     
-    if (timer <= hwlib::now_us() )
-    {
-        timer = hwlib::now_us() + 10000;
-        sec++;
-        
-        if(sec == 59 ){
-            sec=1;
+
+void clock::update(){
+
+
+        if(sec >= 59 ){
+            sec=0;
             min++;
-       
-            if (min == 59){
-                min = 0;
-            }
+        }
+        if (min >= 59){
+            min = 0;
+            hour +=5;
+        }
 
-        if(min %5 == 0){
-            hour++;
+        if (hour >= 59){
+            hour = 0;
+        }
             
-            if (hour == 59){
-                hour = 0;
-            }
-        }
 
-        }
+        
 
-    }
+    
 
     
 
@@ -90,5 +88,4 @@ void clock::update(){
     draw_second_hand(sec);
     digital_time(hour, min, sec);
     w.flush();
-    }
 }
