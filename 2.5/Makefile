@@ -16,8 +16,8 @@ HEADERS += note.hpp
 HEADERS += melody.hpp
 HEADERS += fur_elise.hpp
 
-SOURCES += melody.cpp 
 SOURCES += generator.cpp
+
 
 
 # other places to look for files for this project

@@ -16,6 +16,9 @@ void clock::draw_boundary(){
     boun.draw( w );
 }
 
+/**
+ * 
+ */
 void clock::draw_hour_hand(int i){
     hwlib::xy endpoint(middle_point - (arr[i] / 2));
     hwlib::line l(middle_point, endpoint);

@@ -1,4 +1,4 @@
-
+#include "note_player_pc.hpp"
 #include "melody.hpp"
 
 const char sos[]          = "SOS:d=4,o=5,b=60:a,p,a,p,a,p,2a.,p,2a.,p,2a.,p,a,p,a,p,a";
@@ -10,7 +10,11 @@ const char test[]         = "ZeldaFore:d=4,o=6,b=120:8f5,8a5,b5,8f5,8a5,b5,8f5,8
 
 
 int main( void ){	
-   int i = 0;
-   i + 1;
+   auto pc = note_player_pc();
+   
+   if ( 1 ){
+      melody m;
+      m.char_to_note( test );
+   }
    
 }

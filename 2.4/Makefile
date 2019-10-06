@@ -16,7 +16,7 @@ HEADERS += note.hpp
 HEADERS += melody.hpp
 HEADERS += fur_elise.hpp
 
-SOURCES += melody.cpp 
+SOURCES += 
 
 
 

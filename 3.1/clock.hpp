@@ -36,10 +36,10 @@ class clock{
        float hoek_c =  180 - 90 - hoek_b;                       
        float x_cor = -sin(radians_from_degrees(hoek_b)) * 30;
        float y_cor = sin(radians_from_degrees(hoek_c)) * 30;
-       arr[i] = hwlib::xy(x_cor, y_cor);
+       arr[i] = hwlib::xy(x_cor, y_cor);                  
    }
       for(int i = 0; i < 12; i++){
-       float hoek_b =  i * 30;
+       float hoek_b =  i * 30;                                 //we want to move the dot on each 30 degrees
        float hoek_c =  180 - 90 - hoek_b;
        float x_cor = -sin(radians_from_degrees(hoek_b)) * 30;
        float y_cor = sin(radians_from_degrees(hoek_c)) * 30;

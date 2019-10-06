@@ -10,9 +10,9 @@
 
 # source & header files in this project (main.cpp is automatically assumed)
 
-HEADERS += clock.hpp
+HEADERS += clock.hpp calc_angle_sin.hpp
 
-SOURCES += clock.cpp
+SOURCES += clock.cpp 
 
 
 # other places to look for files for this project
