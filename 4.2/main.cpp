@@ -6,6 +6,7 @@
 
 int main( void ){	
    lz_compressor< 4096 > compressor;
+   lz_decompressor decompress;
  
    std::ifstream f1;
    f1.open( "wilhelmus.txt" );
@@ -25,7 +26,21 @@ int main( void ){
       [ &f1 ]()-> int { auto c = f1.get(); return f1.eof() ? '\0' : c; },
       [ &f2 ]( char c ){ f2.put( c ); }
   );
+
+  f1.close();
+  f2.close();
    
-   f1.close();
-   f2.close();
+   f1.open("compressed.txt");
+   if( ! f1.is_open()){
+      std::cerr << "input file not opened";
+      return -1;      
+   }
+
+   decompress.decompress(
+      [ &f1 ]()-> int { auto c = f1.get(); return f1.eof() ? '\0' : c; },
+      [&f2]( char c ){ std::cout << c; }
+  );
+      
+   
+   
 }
