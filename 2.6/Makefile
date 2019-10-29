@@ -9,21 +9,19 @@
 #############################################################################
 
 # source & header files in this project (main.cpp is automatically assumed)
-Include maakfile.mk
-
-PROJECT := generator
 
 HEADERS += note.hpp
 HEADERS += note_player.hpp
 HEADERS += fur_elise.hpp
 HEADERS += melody.hpp
-HEADERS += melody.cpp
 
 HEADERS += note_player_gpio.hpp
 SOURCES += note_player_gpio.cpp
 
 HEADERS += rtttl_player.hpp
 SOURCES += rtttl_player.cpp
+
+SOURCES += melody.cpp
 
 # other places to look for files for this project
 SEARCH  := 

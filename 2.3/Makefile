@@ -14,6 +14,9 @@ HEADERS += note_player_pc.hpp
 HEADERS += note.hpp
 HEADERS += note_player.hpp
 HEADERS += melody.hpp
+HEADERS += rtttl_player.hpp
+
+SOURCES += rtttl_player.cpp
 
 # other places to look for files for this project
 SEARCH  := 

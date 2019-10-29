@@ -13,7 +13,7 @@
 HEADERS += note_player_pc.hpp
 HEADERS += note_player.hpp
 HEADERS += note.hpp
-HEADERS += melody.hpp
+HEADERS += note_generator.hpp
 HEADERS += fur_elise.hpp
 
 SOURCES += generator.cpp

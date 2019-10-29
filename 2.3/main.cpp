@@ -1,5 +1,6 @@
 #include "hwlib.hpp"
 #include "note_player_pc.hpp"
+#include "rtttl_player.hpp"
 
 const char sos[]          = "SOS:d=4,o=5,b=60:a,p,a,p,a,p,2a.,p,2a.,p,2a.,p,a,p,a,p,a";
 const char let_it_be[]    = "Beatles Let It Be:d=4,o=5,b=100:16e6,8d6,c6,16e6,8g6,8a6,8g.6,16g6,8g6,8e6,16d6,8c6,16a,8g,e.6,p,8e6,16e6,8f.6,8e6,8e6,8d6,16p,16e6,16d6,8d6,2c.6";
@@ -9,12 +10,12 @@ const char one[]          = "NumberOne:d=16,o=5,b=168:4f.,8c6,16b5,16c6,16b5,16c
 const char test[]         = "ZeldaFore:d=4,o=6,b=120:8f5,8a5,b5,8f5,8a5,b5,8f5,8a5,8b5,8e,d,8b5,8c,8b5,8g5,2e5,8p,8d5,8e5,8g5,2e5,8p,8d5,8e5,f5,8g5,8a5,b5,8c,8b5,e5,8p,8d5,8c5,8f5,8e5,8g5,8f5,8a5,8g5,16a_5,16a5,16a5,16g5,2a5";
 
 
-int main( void ){	
+int main( ){	
    auto pc = note_player_pc();
    hwlib::wait_ms( 10 );
    
    if ( 1 ){
-      pc.play( one );
+      rtttl_play(pc, one);
    }
    
 }

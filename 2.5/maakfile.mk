@@ -1,19 +1,19 @@
 
 .PHONY: build clean
 
-build: generator 
+build: generator.exe
 
 clean:
-	rm -f generator generator.o melody.o
+	rm -f generator generator.o  rtttl_player.o
 
-generator: generator.o melody.o
-	g++  generator.o -o generator.exe
+generator.exe: generator.o rtttl_player.o 
+	g++  generator.o  rtttl_player.o -o generator.exe
 
-generator.o: generator.cpp 
+generator.o: generator.cpp note_generator.hpp rtttl_player.hpp note_player.hpp note.hpp
 	g++ -c generator.cpp -o generator.o
 
-melody.o: melody.hpp note_player.hpp
-	g++ -c melody.hpp -o melody.o
+rtttl_player.o: rtttl_player.hpp rtttl_player.cpp note_player.hpp note.hpp
+	g++ -c rtttl_player.cpp -o rtttl_player.o
 
 melody.cpp: generator.exe
 	./generator.exe > melody.cpp

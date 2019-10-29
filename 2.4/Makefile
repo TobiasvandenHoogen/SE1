@@ -15,8 +15,10 @@ HEADERS += note_player.hpp
 HEADERS += note.hpp
 HEADERS += melody.hpp
 HEADERS += fur_elise.hpp
+HEADERS += note_generator.hpp
+HEADERS += rtttl_player.hpp
 
-SOURCES += 
+SOURCES += rtttl_player.cpp
 
 
 

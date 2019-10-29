@@ -22,8 +22,6 @@ int main( void ){
    HWLIB_TRACE;
    
    if( 1 ){
-      melody_song ms;
-      ms.play(p);
    }      
    
    if( 0 ){ rtttl_play( p, sos ); }   
