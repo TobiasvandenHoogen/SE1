@@ -8,23 +8,16 @@
 # 
 #############################################################################
 
-# source & header files in this project (main.cpp is automatically assumed)
+# source files in this project (main.cpp is automatically assumed)
+SOURCES :=
 
-include maakfile.mk
-
-HEADERS += note.hpp
-HEADERS += note_player.hpp
-HEADERS += melody.hpp
-
-HEADERS += note_player_gpio.hpp
-SOURCES += note_player_gpio.cpp
-
-SOURCES += melody.cpp
+# header files in this project
+HEADERS := match.hpp compressor.hpp decompressor.hpp
 
 # other places to look for files for this project
-SEARCH  := 
+SEARCH  := ../07-library
 
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
 RELATIVE := $(RELATIVE)../
-include $(RELATIVE)Makefile.due
+include $(RELATIVE)Makefile.native
