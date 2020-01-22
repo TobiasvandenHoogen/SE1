@@ -18,8 +18,7 @@ int main( void ){
    auto p = note_player_gpio( lsp );
    melody_song m;
    hwlib::wait_ms( 10 );
-   
-   HWLIB_TRACE;
+
    
    if( 1 ){
       m.play( p );

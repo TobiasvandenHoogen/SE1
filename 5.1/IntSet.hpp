@@ -7,43 +7,49 @@
 
 class IntSet{
 protected:
-std::array<int, 10> Set;
-size_t size = 0;
+
+    std::array<int, 10> Set;
+    size_t size = 0;
 
 public:
-void add(int n){
-    if((size < 10) && (!contains(n))){
-        Set[size] = n;
-        size++;
-    }
-}
 
-void remove(int n){
-        if(contains(n)){
-            std::remove(Set.begin(), Set.end(), n);
-            size--;
-    }
-}
-
-bool contains(int n){
-    for(size_t i = 0; i < size; i++){
-        if(Set[i] == n){
-            return true;
+    //inserts integer if it doesn't already contain in the set
+    void add(int n){
+        if((size < 10) && (!contains(n))){
+            Set[size] = n;
+            size++;
         }
     }
-    return false;
-}
 
-friend std::ostream& operator<<(std::ostream & os, const IntSet & set);
+    //removes given integer if it contains in the set 
+    void remove(int n){
+            if(contains(n)){
+                std::remove(Set.begin(), Set.end(), n);
+                size--;
+        }
+    }
+
+    //checks if given integer is already in set 
+    bool contains(int n){
+        for(size_t i = 0; i < size; i++){
+            if(Set[i] == n){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    
+    friend std::ostream& operator<<(std::ostream & os, const IntSet & set);
 
 
 };
-
-std::ostream& operator<<(std::ostream & os, const IntSet & set){
-    for(size_t i = 0; i < set.size; i++){
-        os << set.Set[i] << '\n';
+    //operator overloading to print the set 
+    std::ostream& operator<<(std::ostream & os, const IntSet & set){
+        for(size_t i = 0; i < set.size; i++){
+            os << set.Set[i] << '\n';
+        }
+        return os;
     }
-    return os;
-}
 
 #endif 

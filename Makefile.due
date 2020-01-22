@@ -10,16 +10,8 @@
 
 # settings for Arduino Due projects
 TARGET            := arduino_due
-SERIAL_PORT       ?= /dev/ttyACM0
-STACK_SIZE        ?= 81920
+SERIAL_PORT       ?= COM7
 CONSOLE_BAUDRATE  := 2400
-HEAP              ?= BMPTK
 
-# add the rtos
-RTOS              := $(HOME)/rtos
-include           $(RTOS)/makefile.inc
-
-# defer to the Makefile.shared
+# defer to the Makefile.link
 include           $(RELATIVE)/Makefile.link
-
-

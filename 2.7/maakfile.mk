@@ -15,8 +15,8 @@ generator.o: generator.cpp note_generator.hpp rtttl_player.hpp note_player.hpp n
 rtttl_player.o: rtttl_player.hpp rtttl_player.cpp note_player.hpp note.hpp
 	g++ -c rtttl_player.cpp -o rtttl_player.o
 
-melody.cpp: generator.exe
-	./generator.exe > melody.cpp
+melody: generator.exe
+	./generator.exe 
 
 
 

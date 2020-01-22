@@ -9,15 +9,16 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES :=
+SOURCES := decompressor.asm compressed.asm
 
 # header files in this project
-HEADERS := match.hpp compressor.hpp decompressor.hpp
+HEADERS := 
 
 # other places to look for files for this project
 SEARCH  := ../07-library
 
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
-RELATIVE := $(RELATIVE)../
-include $(RELATIVE)Makefile.native
+
+RELATIVE := ..
+include $(RELATIVE)/Makefile.due

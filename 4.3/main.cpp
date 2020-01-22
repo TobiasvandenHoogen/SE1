@@ -17,13 +17,13 @@ int main( void ){
    
    std::ofstream f2;
    f2.open( "compressed.asm" );
-   f2 << "//code made by Tobias van den Hoogen\n.global compressed\n.text\n\t msg: .asciz" << k;
+   f2 << "//code made by Tobias van den Hoogen\n.global compressed\n.text\n\t msg: .asciz " << k;
    if( ! f2.is_open()){
       std::cerr << "output file not opened";
       return -1;      
    }
    
-   compressor.compress( 
+    compressor.compress( 
       [ &f1 ]()-> int { auto c = f1.get(); return f1.eof() ? '\0' : c; },
       [ &f2 ]( char c ){ f2.put( (c == '\n') ? '\b' : c); }
   );

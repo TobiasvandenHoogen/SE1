@@ -9,55 +9,62 @@ template <typename T,unsigned int N>
 
 class IntSet{
 protected:
-std::array<T, N> Set;
-size_t size = 0;
+    std::array<T, N> Set;   //the template array
+    size_t size = 0;        //index attribute
 
 public:
-void add(T n){
-    if((size < N) && (!contains(n))){
-        Set[size] = n;
-        size++;
-    }
-}
 
-void remove(T n){
+    //inserts the given value if it doesn't already contains in the set
+    void add(T n){
+        if((size < N) && (!contains(n))){   
+            Set[size] = n;
+            size++;
+        }
+    }
+
+    //removes given value if it contains in the set 
+    void remove(T n){
         if(contains(n)){
             std::remove(Set.begin(), Set.end(), n);
             size--;
+        }   
     }
-}
 
-bool contains(T n){
-    for(size_t i = 0; i < size; i++){
-        if(Set[i] == n){
-            return true;
+    //checks if given value is in set 
+    bool contains(T n){
+        for(size_t i = 0; i < size; i++){
+            if(Set[i] == n){
+                return true;
+            }
         }
+        return false;
     }
-    return false;
-}
 
-T MaxElement(){
-    T maxvalue = Set[0];
-    for(size_t i = 1; i < size; i++){
-        if(Set[i] > maxvalue){
-            maxvalue = Set[i];
+    //returns the maxvalue of a set 
+    T MaxElement(){
+        T maxvalue = Set[0];
+        for(size_t i = 1; i < size; i++){
+            if(Set[i] > maxvalue){
+                maxvalue = Set[i];
+            }
         }
+        return maxvalue;
     }
-    return maxvalue;
-}
 
 
-template <typename S,unsigned int M>
-friend std::ostream& operator<<(std::ostream & os, const IntSet<S, M> & set);
+    template <typename S,unsigned int M>
+    friend std::ostream& operator<<(std::ostream & os, const IntSet<S, M> & set);
 
 
 };
-template <typename S,unsigned int M>
-std::ostream& operator<<(std::ostream & os, const IntSet<S, M> & set){
-    for(S i = 0; i < set.size; i++){
-        os << set.Set[i] << '\n';
+
+    //operator ostream overloading to print the set 
+    template <typename S,unsigned int M>
+    std::ostream& operator<<(std::ostream & os, const IntSet<S, M> & set){
+        for(S i = 0; i < set.size; i++){
+            os << set.Set[i] << '\n';
+        }
+        return os;
     }
-    return os;
-}
 
 #endif 

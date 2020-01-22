@@ -22,9 +22,9 @@ int main( void ){
       return -1;      
    }
    
-   compressor.compress( 
+  compressor.compress( 
       [ &f1 ]()-> int { auto c = f1.get(); return f1.eof() ? '\0' : c; },
-      [ &f2 ]( char c ){ f2.put( c ); }
+      [ &f2 ]( char c ){ if(c == '\n') {f2<< "\\n";}else{ f2 << c;}; }
   );
 
   f1.close();

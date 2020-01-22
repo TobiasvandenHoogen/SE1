@@ -13,6 +13,8 @@ std::array<T, N> Set;
 size_t size = 0;
 
 public:
+
+//inserts the given value if it doesn't already contains in the set
 void add(T n){
     if((size < N) && (!contains(n))){
         Set[size] = n;
@@ -20,6 +22,7 @@ void add(T n){
     }
 }
 
+  //removes given value if it contains in the set 
 void remove(T n){
         if(contains(n)){
             std::remove(Set.begin(), Set.end(), n);
@@ -27,6 +30,7 @@ void remove(T n){
     }
 }
 
+//checks if given value is already in set 
 bool contains(T n){
     for(size_t i = 0; i < size; i++){
         if(Set[i] == n){

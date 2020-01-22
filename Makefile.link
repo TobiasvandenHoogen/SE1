@@ -10,9 +10,8 @@
 
 # the location of the ti software directory
 RELATIVE          ?= .
-TI-SOFTWARE       := $(HOME)
+TI-SOFTWARE       := $(RELATIVE)/..
 
 # add hwlib
-HWLIB             := $(TI-SOFTWARE)/hwlib
-BMPTK             := $(TI-SOFTWARE)/bmptk
+HWLIB             ?= $(TI-SOFTWARE)/hwlib
 include           $(HWLIB)/makefile.inc

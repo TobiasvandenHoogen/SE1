@@ -9,7 +9,7 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES :=
+SOURCES := compressed.asm
 
 # header files in this project
 HEADERS := match.hpp compressor.hpp decompressor.hpp
